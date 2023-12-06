@@ -1,3 +1,4 @@
+// SNACK 1
 let bikeArray = [
     {
         name: 'Atala',
@@ -31,3 +32,54 @@ bikeArray.forEach((elem) => {
         console.log(elem);
     }
 })
+
+
+// SNACK 2
+let footballTeams = [
+    {
+        name: 'Atlanta',
+        goal: 0,
+        fouls: 0
+    },
+    {
+        name: 'Juventus',
+        goal: 0,
+        fouls: 0
+    },
+    {
+        name: 'Milan',
+        goal: 0,
+        fouls: 0
+    },
+    {
+        name: 'Inter',
+        goal: 0,
+        fouls: 0
+    },
+    {
+        name: 'Barcellona',
+        goal: 0,
+        fouls: 0
+    },
+    {
+        name: 'Real Madrid',
+        goal: 0,
+        fouls: 0
+    },
+]
+console.log(footballTeams);
+
+let foulsTeams = []
+footballTeams.map((elem) => {
+    let {name, goal, fouls} = elem;
+
+    if (goal == 0) {
+        elem.goal = Math.floor(Math.random()*10 + 0);
+        elem.fouls = Math.floor(Math.random()*10 + 0);
+        console.log(elem);
+        delete elem.goal;
+        foulsTeams.push(elem)
+    }
+})
+delete foulsTeams['goal'];
+console.log(foulsTeams);
