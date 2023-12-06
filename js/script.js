@@ -149,3 +149,10 @@ articles.map((elem) => {
 })
 
 console.log(newArticles);
+
+let ul = document.querySelector('ul');
+newArticles.forEach((elem) => {
+    let li = document.createElement('li');
+    li.textContent = `Nome: ${elem.name} , Tipo: ${elem.type} , Colore: ${elem.color} , Posizione: ${elem.position}`;
+    ul.appendChild(li);
+})
