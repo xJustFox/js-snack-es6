@@ -1,3 +1,5 @@
+console.log("------------------------SNACK 1-------------------------");
+
 // SNACK 1
 let bikeArray = [
     {
@@ -36,6 +38,7 @@ bikeArray.forEach((elem) => {
     }
 })
 
+console.log("------------------------SNACK 2-------------------------");
 
 // SNACK 2
 let footballTeams = [
@@ -96,6 +99,7 @@ footballTeams.map((elem) => {
 })
 console.log(foulsTeams);
 
+console.log("------------------------SNACK 3-------------------------");
 
 // SNACK 3
 let articles = [
@@ -118,3 +122,30 @@ let articles = [
         color: 'pink'
     }
 ]
+
+console.log(articles);
+
+// Funzione che genera una lettera casuale dalla a alla z
+const generateRandomLetter = function () {
+    const letters = 'abcdefghijklmnopqrstuvwxyz';
+    const lettersLength = letters.length;
+
+    return letters.charAt(Math.floor(Math.random() * lettersLength));
+}
+
+// Creo un array vuoto
+let newArticles = [];
+
+// Scrollo gli oggetti contenuti nell'array
+articles.map((elem) => {
+    // destructuring
+    let {name, type, color, position} = elem;
+
+    // Aggiungo alla proprietà position la funzione 'generateRandomLetter()'
+    elem.position = generateRandomLetter();
+
+    // Aggiungo i nuovi oggetti alla variabile vuota
+    newArticles.push(elem);
+})
+
+console.log(newArticles);
