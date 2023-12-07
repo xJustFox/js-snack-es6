@@ -28,15 +28,20 @@ let bikeArray = [
     },
 ]
 // Scrollo gli oggetti contenuti nell'array
+let lowerBike = bikeArray[0]
 bikeArray.forEach((elem) => {
-    // destructuring
-    let {name, weight} = elem;
 
     // se il peso è minore di 25 verra printato in console
-    if (weight <= 25) {
+    if (elem.weight < lowerBike.weight) {
+        lowerBike = elem;
         console.log(elem);
     }
 })
+
+let {name, weight} = lowerBike;
+
+let text = `La bici più leggera è la ${name} e pesa ${weight}`;
+console.log(text);
 
 console.log("------------------------SNACK 2-------------------------");
 
