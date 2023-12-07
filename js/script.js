@@ -91,8 +91,8 @@ footballTeams.map((elem) => {
     // Utilizzo un if per filtrare i valori che voglio cambiare
     if (goal == 0 && fouls == 0) {
         // genero randomicamente i valori e gli aggiungo alle proprietà che devono essere cambiate
-        elem.goal = Math.floor(Math.random()*10 + 0);
-        elem.fouls = Math.floor(Math.random()*10 + 0);
+        elem.goal = Math.floor(Math.random()*50 + 1);
+        elem.fouls = Math.floor(Math.random()*20 + 1);
         console.log(elem);
 
         // elimino la proprietà goal
